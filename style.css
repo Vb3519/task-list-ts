@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    margin: 0;
+}
+
+.app-page {
+    background: #dfdede;
+    width: 100%;
+    height: 100vh;
+}
+
+.my-task-app {                
+    position: relative;
+    margin: auto;
+    width: 60%;
+    max-width: 500px;
+    border: 2px solid gray;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.app-page__heading {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 0;
+}
+
+/* --- контейнер тасков: --- */
+
+.my-task-app__tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* --- таск: --- */
+.tasks-container__task {
+    width: 100%;                
+    border: 1px solid gray;
+    padding: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.tasks-container__task.high {
+    background: #d2ab65;
+}
+
+.tasks-container__task.medium {
+    background: #5151d4;
+}
+
+.tasks-container__task.low {
+    background: #589058;
+}
+
+.tasks-container__task.standard {
+    background: #b4b0b0;
+}
+
+.tasks-container__task__btns {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+}
+
+.task-btns__priority, .task-btns__close {
+    font-weight: bold;
+    font-family: normal;
+}
+
+.task-btns__priority:hover {
+    cursor: pointer;
+    color: orange;
+    transform: scale(1.1);
+}
+
+.task-btns__close:hover {
+    cursor: pointer;
+    color: orange;
+    transform: scale(1.1);
+}
+
+.tasks-container__task__text {
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.tasks-container__task__date {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+}
+
+/* --- поле input: --- */
+
+.my-task-app__input {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;               
+}
+
+.input-field__input-task {
+    height: 2rem;
+    width: 70%;
+    outline: none;
+    border: none;
+}
+
+.input-field__add-btn {
+    height: 2rem;
+    cursor: pointer;
+}
+
+/* --- меню приоритетов таска: --- */
+
+.tasks-container__task__menu {
+    position: absolute;
+    top: -2px;
+    right: -130px;
+    line-height: 1.3rem;
+    padding: 0.5rem;
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+    border: 2px solid gray;
+}
+
+.tasks-container__task__menu-active {
+    display: flex;
+}
+
+.priority-menu__inner {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.9rem;
+}
+
+.priority-menu__inner > li:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.priority-menu__close {
+    font-size: 0.9rem;
+}
+
+.priority-menu__close:hover {
+    cursor: pointer;
+    font-weight: bold;
+    color: #ca8300;
+    text-decoration: underline;
+} 
